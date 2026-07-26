@@ -11,8 +11,8 @@ export function HeroSection() {
       <Container className="hero-section__inner">
         <div className="hero-copy">
           <h1>
-            Generating
-            <span>Green Growth</span>
+            <span>Generating</span>
+            <span className="hero-copy__title-line">Green Growth</span>
           </h1>
           <LeafDivider wide />
           <p className="hero-copy__lead">
@@ -27,7 +27,16 @@ export function HeroSection() {
                   <span aria-hidden="true">
                     <Icon size={27} strokeWidth={1.65} />
                   </span>
-                  <p>{feature.title}</p>
+                  <p>
+                    {feature.title === "Trusted Worldwide" ? (
+                      <>
+                        Trusted
+                        <span>Worldwide</span>
+                      </>
+                    ) : (
+                      feature.title
+                    )}
+                  </p>
                 </article>
               );
             })}

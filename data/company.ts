@@ -5,24 +5,12 @@ export const company = {
   yearsOfExcellence: 26,
   phone: "+91 98464 34252",
   phoneHref: "tel:+919846434252",
+  whatsappHref: "https://wa.me/919846434252",
   email: "martin.mjplastics@gmail.com",
   website: "www.mj-plastics.com",
   websiteHref: "https://www.mj-plastics.com",
   location: "Kochi, Kerala, India",
 } as const;
-
-const enquirySubject = "Product Enquiry — MJ Plastics Website";
-const enquiryBody = `Hello MJ Plastics,
-I would like to enquire about your grow bags and agricultural products.
-Name:
-Company:
-Country:
-Product requirement:
-Quantity:`;
-
-export const enquiryHref = `mailto:${company.email}?subject=${encodeURIComponent(
-  enquirySubject,
-)}&body=${encodeURIComponent(enquiryBody)}`;
 
 export const globalReasons = [
   "26 Years of Industry Expertise",

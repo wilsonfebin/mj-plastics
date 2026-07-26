@@ -12,6 +12,7 @@ export function CropCard({ crop }: { crop: CropCardData }) {
           unoptimized
           sizes="(max-width: 640px) 70vw, (max-width: 1024px) 33vw, 16vw"
           className="crop-card__photo"
+          style={{ objectPosition: crop.objectPosition ?? "center" }}
         />
       </div>
       <div className="crop-card__content">

@@ -1,8 +1,9 @@
 "use client";
 
-import { enquiryHref } from "@/data/company";
+import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
+import { company } from "@/data/company";
 import { navigation } from "@/data/navigation";
-import { Menu, Send, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useState } from "react";
 
 export function MobileNavigation() {
@@ -31,8 +32,14 @@ export function MobileNavigation() {
             </a>
           ))}
         </nav>
-        <a className="mobile-nav__cta" href={enquiryHref} onClick={() => setOpen(false)}>
-          Enquiry Now <Send size={16} aria-hidden="true" />
+        <a
+          className="mobile-nav__cta"
+          href={company.whatsappHref}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={() => setOpen(false)}
+        >
+          Enquiry Now <WhatsAppIcon />
         </a>
       </div>
     </div>

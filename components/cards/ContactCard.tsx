@@ -1,5 +1,5 @@
-import { Button } from "@/components/ui/Button";
-import { company, enquiryHref } from "@/data/company";
+import { EnquiryForm } from "@/components/forms/EnquiryForm";
+import { company } from "@/data/company";
 import { Globe2, Mail, MapPin, Phone } from "lucide-react";
 
 export function ContactCard() {
@@ -11,7 +11,7 @@ export function ContactCard() {
     },
     { icon: Phone, label: company.phone, href: company.phoneHref },
     { icon: Globe2, label: company.website, href: company.websiteHref },
-    { icon: Mail, label: company.email, href: `mailto:${company.email}` },
+    { icon: Mail, label: company.email },
   ];
 
   return (
@@ -24,18 +24,25 @@ export function ContactCard() {
         {details.map((detail) => {
           const Icon = detail.icon;
           return (
-            <a key={detail.label} href={detail.href}>
-              <span aria-hidden="true">
-                <Icon size={15} />
+            detail.href ? (
+              <a key={detail.label} href={detail.href}>
+                <span aria-hidden="true">
+                  <Icon size={15} />
+                </span>
+                {detail.label}
+              </a>
+            ) : (
+              <span className="contact-card__detail" key={detail.label}>
+                <span aria-hidden="true">
+                  <Icon size={15} />
+                </span>
+                {detail.label}
               </span>
-              {detail.label}
-            </a>
+            )
           );
         })}
       </address>
-      <Button href={enquiryHref} icon="send">
-        Enquiry Now
-      </Button>
+      <EnquiryForm />
     </aside>
   );
 }

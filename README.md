@@ -1,7 +1,7 @@
 # MJ Plastics website
 
-A responsive, production-ready one-page website for MJ Plastics, recreated from
-the supplied visual reference with locally hosted product photography.
+A responsive one-page website for MJ Plastics, recreated from the supplied
+visual reference and built entirely from local source code and assets.
 
 ## Run locally
 
@@ -10,7 +10,16 @@ npm install
 npm run dev
 ```
 
-The local address is printed in the terminal.
+The local address is printed in the terminal. No environment variables, API
+keys, external services, or backend are required.
+
+Create the static production export with:
+
+```bash
+npm run build
+```
+
+The complete static website is written to `out/`.
 
 ## Quality checks
 
@@ -34,6 +43,7 @@ npm run format
 - Technical features: `data/technical-features.ts`
 - Crop cards and image paths: `data/crop-cards.ts`
 - Local photography: `public/images/`
+- Transparent brand asset: `public/brand/mj-plastics-logo.png`
 - City-light positions, sizes and animation delays: `cityLights` in
   `data/company.ts`
 
@@ -46,20 +56,8 @@ Replace an image with another image of the same filename, or add a new image in
 `public/images/` and update its path in the corresponding data or section file.
 WebP is preferred for photographs.
 
-## Deployment
+## Enquiries
 
-### Vercel
-
-Import the repository into Vercel, keep the detected Next.js settings, and
-deploy. No environment variables or backend services are required.
-
-### Static or object storage hosting
-
-The page has no database, API, authentication, or server-side mutations. To
-produce a conventional Next.js static export for AWS S3, CloudFront, Netlify,
-or another static host, add `output: "export"` to `next.config.ts`, run
-`npm run build`, then upload the generated `out/` directory. The image
-configuration is already compatible with static hosting.
-
-This workspace also includes the Sites deployment configuration used for the
-production preview.
+The enquiry form is browser-only. Submissions are stored in the current
+browser's local storage under `mj-plastics-enquiries`; no email client, SMTP
+service, remote API, or server is involved.

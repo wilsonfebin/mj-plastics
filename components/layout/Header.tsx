@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/Button";
 import { BrandMark } from "@/components/ui/BrandMark";
 import { Container } from "@/components/ui/Container";
-import { enquiryHref } from "@/data/company";
+import { company } from "@/data/company";
 import { navigation } from "@/data/navigation";
 import { MobileNavigation } from "./MobileNavigation";
 
@@ -23,7 +23,13 @@ export function Header() {
             </a>
           ))}
         </nav>
-        <Button href={enquiryHref} icon="send" className="site-header__cta">
+        <Button
+          href={company.whatsappHref}
+          icon="whatsapp"
+          className="site-header__cta"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Enquiry Now
         </Button>
         <MobileNavigation />
