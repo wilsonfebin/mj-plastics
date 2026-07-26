@@ -1,4 +1,4 @@
-import { EnquiryForm } from "@/components/forms/EnquiryForm";
+import { Button } from "@/components/ui/Button";
 import { company } from "@/data/company";
 import { Globe2, Mail, MapPin, Phone } from "lucide-react";
 
@@ -48,7 +48,14 @@ export function ContactCard() {
           );
         })}
       </address>
-      <EnquiryForm />
+      <Button
+        href={company.whatsappHref}
+        icon="whatsapp"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Enquiry Now
+      </Button>
     </aside>
   );
 }
