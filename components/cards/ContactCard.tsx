@@ -7,7 +7,8 @@ export function ContactCard() {
     {
       icon: MapPin,
       label: "India — Kochi, Kerala",
-      href: "https://maps.google.com/?q=Kochi%2C+Kerala%2C+India",
+      href: "https://share.google/Pri95BNK3tLbTnPOF",
+      newWindow: true,
     },
     {
       icon: Phone,
@@ -31,7 +32,12 @@ export function ContactCard() {
           const Icon = detail.icon;
           return (
             detail.href ? (
-              <a key={detail.label} href={detail.href}>
+              <a
+                key={detail.label}
+                href={detail.href}
+                target={"newWindow" in detail && detail.newWindow ? "_blank" : undefined}
+                rel={"newWindow" in detail && detail.newWindow ? "noopener noreferrer" : undefined}
+              >
                 <span aria-hidden="true">
                   <Icon size={15} />
                 </span>
