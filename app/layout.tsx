@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.mj-plastics.com"),
+  metadataBase: new URL("https://www.mjplastics.in"),
   title: {
     default: "MJ Plastics | Sustainable Grow Bags and Agricultural Solutions",
     template: "%s | MJ Plastics",

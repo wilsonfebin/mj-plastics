@@ -13,8 +13,8 @@ export default function Home() {
     "@type": ["Organization", "LocalBusiness"],
     name: company.name,
     url: company.websiteHref,
-    email: company.email,
-    telephone: company.phone,
+    email: [company.email, company.secondaryEmail],
+    telephone: [company.phone, company.secondaryPhone],
     foundingDate: String(company.foundedYear),
     address: {
       "@type": "PostalAddress",

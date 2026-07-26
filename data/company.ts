@@ -3,12 +3,15 @@ export const company = {
   foundedYear: 1999,
   tagline: "Generating Green Growth",
   yearsOfExcellence: 26,
-  phone: "+91 98464 34252",
+  phone: "+91 9846434252",
   phoneHref: "tel:+919846434252",
+  secondaryPhone: "+91 9447151256",
+  secondaryPhoneHref: "tel:+919447151256",
   whatsappHref: "https://wa.me/919846434252",
-  email: "martin.mjplastics@gmail.com",
-  website: "www.mj-plastics.com",
-  websiteHref: "https://www.mj-plastics.com",
+  email: "ceo@mjplastics.in",
+  secondaryEmail: "sales@mjplastics.in",
+  website: "www.mjplastics.in",
+  websiteHref: "https://www.mjplastics.in",
   location: "Kochi, Kerala, India",
 } as const;
 
@@ -21,11 +24,13 @@ export const globalReasons = [
 ] as const;
 
 export const exportMarkets = [
-  "India",
-  "UAE",
+  "Middle East",
   "Europe",
   "Africa",
   "South America",
+  "South East Asia",
+  "Australia",
+  "New Zealand",
 ] as const;
 
 export const cityLights = [

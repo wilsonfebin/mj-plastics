@@ -9,9 +9,15 @@ export function ContactCard() {
       label: "India — Kochi, Kerala",
       href: "https://maps.google.com/?q=Kochi%2C+Kerala%2C+India",
     },
-    { icon: Phone, label: company.phone, href: company.phoneHref },
+    {
+      icon: Phone,
+      label: `${company.phone}, ${company.secondaryPhone}`,
+    },
     { icon: Globe2, label: company.website, href: company.websiteHref },
-    { icon: Mail, label: company.email },
+    {
+      icon: Mail,
+      label: `${company.email} · ${company.secondaryEmail}`,
+    },
   ];
 
   return (
