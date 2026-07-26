@@ -1,0 +1,16 @@
+{
+  "name": "MJ Plastics",
+  "short_name": "MJ Plastics",
+  "description": "Sustainable grow bags and agricultural solutions from Kochi, Kerala.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fffdf8",
+  "theme_color": "#073518",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
