@@ -857,7 +857,7 @@ img {
 }
 
 .world-map__image {
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
   filter: saturate(0.92) contrast(1.06);
 }
@@ -1587,8 +1587,8 @@ img {
   }
 
   .world-map__canvas {
-    width: auto;
-    height: 100%;
+    width: 100%;
+    height: auto;
   }
 
   .export-markets {

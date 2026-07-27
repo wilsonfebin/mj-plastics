@@ -7,12 +7,12 @@ export function BlinkingWorldMap() {
       <div className="world-map__canvas">
         <Image
           src="/images/map/world-night.webp"
-        alt="World map illuminated by warm city lights at night"
-        fill
-        loading="eager"
-        unoptimized
-        sizes="(max-width: 900px) 100vw, 58vw"
-        className="world-map__image"
+          alt="World map illuminated by warm city lights at night"
+          fill
+          loading="eager"
+          unoptimized
+          sizes="(max-width: 900px) 100vw, 58vw"
+          className="world-map__image"
         />
         {cityLights.map((light) => (
           <span

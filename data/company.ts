@@ -43,6 +43,10 @@ export const cityLights = [
   { id: "singapore", left: 69.8, top: 64.2, delay: 2.6, duration: 3.6, size: 6 },
   { id: "sydney", left: 82.3, top: 88.5, delay: 3.2, duration: 3.2, size: 6 },
   { id: "auckland", left: 89.2, top: 92.7, delay: 3.9, duration: 3.7, size: 6 },
+  { id: "japan", left: 80.1, top: 39, delay: 1.4, duration: 3.4, size: 6 },
+  { id: "tanzania", left: 50.1, top: 72.7, delay: 2.3, duration: 3.2, size: 6 },
+  { id: "seoul", left: 76.4, top: 37.5, delay: 3, duration: 3.5, size: 6 },
+  { id: "beijing", left: 72.3, top: 35.4, delay: 0.9, duration: 3.3, size: 6 },
 ] as const;
 
 export const footerLinks = {
