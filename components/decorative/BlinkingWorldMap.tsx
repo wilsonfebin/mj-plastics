@@ -23,7 +23,7 @@ export function BlinkingWorldMap() {
             width: light.size,
             height: light.size,
             animationDelay: `${light.delay}s`,
-            animationDuration: `${2.7 + (light.delay % 1.2)}s`,
+            animationDuration: `${light.duration}s`,
           }}
         />
       ))}
