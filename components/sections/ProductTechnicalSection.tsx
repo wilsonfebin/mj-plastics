@@ -37,8 +37,8 @@ export function ProductTechnicalSection() {
               durability and sustainability in every product.
             </p>
             <div className="product-lists">
-              <Checklist title="1. Our Product Range" items={productRange} />
-              <Checklist title="2. Technical Highlights" items={technicalHighlights} />
+              <Checklist title="Product Range" items={productRange} />
+              <Checklist title="Technical Highlights" items={technicalHighlights} />
             </div>
           </div>
           <div className="product-gallery">
