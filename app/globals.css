@@ -831,9 +831,19 @@ img {
 
 .world-map {
   position: relative;
+  overflow: hidden;
   width: 100%;
   height: 100%;
   min-height: 270px;
+}
+
+.world-map__canvas {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  aspect-ratio: 1740 / 749;
+  transform: translate(-50%, -50%);
 }
 
 .world-map::after {
@@ -856,12 +866,27 @@ img {
   position: absolute;
   z-index: 3;
   border-radius: 50%;
-  background: #8fe56f;
+  background: #b0ff8f;
   box-shadow:
-    0 0 5px rgba(143, 229, 111, 0.88),
-    0 0 12px rgba(50, 190, 90, 0.55);
-  animation: cityPulse 4.8s ease-in-out infinite;
+    0 0 7px rgba(176, 255, 143, 0.95),
+    0 0 18px rgba(42, 220, 90, 0.72);
+  animation: cityPulse 3.2s cubic-bezier(0.45, 0, 0.25, 1) infinite;
   transform: translate(-50%, -50%);
+}
+
+.city-light::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 18px;
+  height: 18px;
+  border: 1px solid rgba(121, 255, 139, 0.85);
+  border-radius: 50%;
+  animation: cityRing 3.2s ease-out infinite;
+  animation-delay: inherit;
+  animation-duration: inherit;
+  content: "";
+  transform: translate(-50%, -50%) scale(0.35);
 }
 
 .export-markets {
@@ -1077,17 +1102,34 @@ img {
 
 @keyframes cityPulse {
   0%,
+  28%,
   100% {
-    opacity: 0.4;
-    box-shadow: 0 0 4px rgba(143, 229, 111, 0.48);
-    transform: translate(-50%, -50%) scale(0.9);
+    opacity: 0.18;
+    box-shadow: 0 0 3px rgba(143, 229, 111, 0.3);
+    transform: translate(-50%, -50%) scale(0.72);
   }
-  50% {
-    opacity: 0.92;
+  46% {
+    opacity: 1;
     box-shadow:
-      0 0 7px rgba(143, 229, 111, 0.9),
-      0 0 14px rgba(50, 190, 90, 0.58);
-    transform: translate(-50%, -50%) scale(1.08);
+      0 0 9px rgba(176, 255, 143, 1),
+      0 0 24px rgba(42, 220, 90, 0.9);
+    transform: translate(-50%, -50%) scale(1.38);
+  }
+}
+
+@keyframes cityRing {
+  0%,
+  30% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.35);
+  }
+  46% {
+    opacity: 0.9;
+  }
+  78%,
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.55);
   }
 }
 
@@ -1542,6 +1584,11 @@ img {
 
   .world-map {
     min-height: 265px;
+  }
+
+  .world-map__canvas {
+    width: auto;
+    height: 100%;
   }
 
   .export-markets {

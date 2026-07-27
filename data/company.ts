@@ -35,14 +35,14 @@ export const exportMarkets = [
 ] as const;
 
 export const cityLights = [
-  { id: "dubai", left: 56.1, top: 46.5, delay: 0.4, duration: 4.8, size: 5 },
-  { id: "london-rotterdam", left: 41.8, top: 28.5, delay: 1.1, duration: 5.2, size: 5 },
-  { id: "johannesburg", left: 48.8, top: 84.5, delay: 2, duration: 4.6, size: 5 },
-  { id: "sao-paulo", left: 29.3, top: 80.2, delay: 0.7, duration: 5, size: 5 },
-  { id: "new-york-toronto", left: 22.1, top: 34, delay: 1.8, duration: 4.7, size: 5 },
-  { id: "singapore", left: 69.8, top: 64.2, delay: 2.6, duration: 5.3, size: 5 },
-  { id: "sydney", left: 82.3, top: 88.5, delay: 3.2, duration: 4.9, size: 5 },
-  { id: "auckland", left: 89.2, top: 92.7, delay: 3.9, duration: 5.4, size: 5 },
+  { id: "dubai", left: 56.1, top: 46.5, delay: 0.4, duration: 3.1, size: 6 },
+  { id: "london-rotterdam", left: 41.8, top: 28.5, delay: 1.1, duration: 3.5, size: 6 },
+  { id: "johannesburg", left: 48.8, top: 84.5, delay: 2, duration: 2.9, size: 6 },
+  { id: "sao-paulo", left: 29.3, top: 80.2, delay: 0.7, duration: 3.3, size: 6 },
+  { id: "new-york-toronto", left: 22.1, top: 34, delay: 1.8, duration: 3, size: 6 },
+  { id: "singapore", left: 69.8, top: 64.2, delay: 2.6, duration: 3.6, size: 6 },
+  { id: "sydney", left: 82.3, top: 88.5, delay: 3.2, duration: 3.2, size: 6 },
+  { id: "auckland", left: 89.2, top: 92.7, delay: 3.9, duration: 3.7, size: 6 },
 ] as const;
 
 export const footerLinks = {
