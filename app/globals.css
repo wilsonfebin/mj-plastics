@@ -826,7 +826,7 @@ img {
 .global-map-panel {
   position: relative;
   align-self: stretch;
-  padding: 6px 4px 93px;
+  padding: 6px 4px 85px;
 }
 
 .world-map {
@@ -868,7 +868,7 @@ img {
   position: absolute;
   z-index: 4;
   right: 13.625%;
-  bottom: 29px;
+  bottom: 21px;
   left: 13.625%;
   display: flex;
   min-height: 48px;

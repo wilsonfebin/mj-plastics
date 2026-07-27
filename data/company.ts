@@ -28,6 +28,7 @@ export const exportMarkets = [
   "Europe",
   "Africa",
   "South America",
+  "North America",
   "South East Asia",
   "Australia",
   "New Zealand",
